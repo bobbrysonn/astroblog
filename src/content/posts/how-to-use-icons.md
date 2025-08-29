@@ -1,45 +1,49 @@
 ---
-title: 如何在 Gyoza 中使用图标？
+title: How to Use Icons in Gyoza?
 date: 2024-05-08T10:54:27.000Z
 tags: [Icon]
-category: 教程
+category: Tutorial
 comments: true
 draft: false
 ---
 
-Gyoza 选择 font-class 的方式引用图标。这些图标大部分来源于 [Remix Icons](https://remixicon.com/)，并且在 [iconfont](https://www.iconfont.cn/) 上进行管理和导出。
+Gyoza uses the **font-class** method for referencing icons.  
+Most of these icons come from [Remix Icons](https://remixicon.com/) and are managed/exported through [iconfont](https://www.iconfont.cn/).
 
-下图展示了项目中的所有图标：
+Here’s an overview of all the icons included in the project:
 
-![所有图标](https://s2.loli.net/2024/05/08/mbdT5HqYMEajyRG.webp)
+![All icons](https://s2.loli.net/2024/05/08/mbdT5HqYMEajyRG.webp)
 
-当你在添加首页显示的社交账号时，你可能会想要使用这些图标。在对应的配置项中填写图标下面有 `icon-` 前缀的名称即可。
+When adding social accounts for display on the homepage, you may want to use these icons.  
+Just fill in the name shown under the icon (with the `icon-` prefix) in the corresponding config field.
 
-如果是在组件中使用图标，可以按照如下方式：
+If you’re using icons inside a component, you can do it like this:
 
 ```jsx
 <i className="iconfont icon-xxx"></i>
 ```
 
-## 为什么不是 SVG 图标？
+## Why Not SVG Icons?
 
-你可能看到很多的项目在使用 [iconify](https://iconify.design/)。iconify 是一个开源图标集，包含超过 20 万个图标，提供了多种框架的引入方式。Astro 中也有对应的插件 astro-icon 可以使用（如果对此感兴趣，可以查看他们的[文档](https://github.com/natemoo-re/astro-icon)）。
+You might have seen many projects using [iconify](https://iconify.design/).
+Iconify is an open-source icon set with over 200,000 icons and provides integration for multiple frameworks. Astro also has a plugin called [astro-icon](https://github.com/natemoo-re/astro-icon) that makes it easy to use.
 
-我在项目中也尝试使用过 iconify，但是出于以下几个原因，我最终还是转向了 font-class 的方式：
+I actually tried iconify in this project, but for several reasons I ended up sticking with the font-class approach:
 
-- 由于项目中同时使用了 Astro 和 React，而在 Astro 组件和 React 组件中使用 iconify 图标的方式是不同的，这会导致代码中不得不存在两种使用方式。
-- iconify 在加载时需要请求它的服务器，~~我会担心请求失败~~，虽然这种担心是多余的。
-- 有一个功能是我会在渲染文章时往 markdown 中注入一些图标，例如外部链接尾部的图标，iconify 想要做到这一点并不方便。
-- 在 HTML 中直接嵌入 SVG icon 的方式并不优雅，使用 font-class 只需要对应的类名，感觉相较而言最终的 HTML 体积小一点，页面加载会快点。我还没有做过具体的测试，但是至少我会尽量避免页面中出现大量的 SVG 仅仅只是作为图标使用。
-- 该项目中用到的图标并不多，主要是一些常用的社交账号的图标，供自定义联系方式时使用。我希望所有图标集中在一起管理，这样更方便一点。
+- The project mixes Astro and React components. Iconify icons are used differently in each, which would force me to maintain two separate usage patterns in the codebase.
+- Iconify loads icons by requesting from their server. ~~I worried about request failures~~ (though admittedly this is unlikely).
+- I inject icons into markdown at render time (e.g. an external link indicator). Doing this with iconify is less convenient.
+- Directly embedding lots of SVG icons in HTML feels messy. With font-class, you only need a class name. The final HTML is slightly smaller, which should make page loads a bit faster (not benchmarked, but still a consideration).
+- The project doesn’t use many icons — mostly common social account logos for custom contact links. Having all icons managed in one place feels simpler.
 
-我必须要承认，目前的图标方案并不优雅，每当图标集合发生修改时我都需要更新对应的字体文件和 CSS 文件。而且其他人想要管理图标集合也变得困难。
+That said, I have to admit this solution isn’t perfect. Every time the icon set changes, I need to update both the font files and the CSS. It also makes it harder for others to manage the collection.
 
-也许我会在未来尝试其他方式，例如 [@iconify/tailwind](https://github.com/iconify/iconify/tree/main/plugins/tailwind)，如果你有更好的方案，也欢迎给我留言。
+Maybe in the future I’ll experiment with alternatives like [@iconify/tailwind](https://github.com/iconify/iconify/tree/main/plugins/tailwind).
+If you’ve got a better idea, feel free to leave me a comment!
 
-## 自定义图标
+## Custom Icons
 
-如果你想要替换 iconfont 的图标，请修改以下文件：
+If you’d like to replace the default iconfont set, update the following files:
 
 ```text
 public/fonts/iconfont.ttf
@@ -48,4 +52,13 @@ public/fonts/iconfont.woff2
 src/styles/iconfont.css
 ```
 
-注意，这将会替换掉项目中使用的所有图标，所以请确保你知道自己在做什么。
+⚠️ Note: This will replace **all** icons used in the project, so make sure you know what you’re doing before making changes.
+
+```
+
+---
+
+This way the guide flows naturally for an English-speaking audience but still keeps your reasoning and dev details.
+
+👉 Do you want me to also make the tone a bit **more casual (like “my thoughts on icons”)** or keep it **practical/documentation-style**?
+```

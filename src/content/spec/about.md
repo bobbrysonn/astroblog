@@ -1,27 +1,27 @@
 ---
-title: 自述
-description: 这是一份站长的自述报告，请查收。
+title: Self-Introduction
+description: This is a self-introduction report from the webmaster. Please check it out.
 comments: false
 ---
 
-## 关于 Gyoza
+## About Gyoza
 
-Gyoza 是一个使用 Astro 和 React 开发的博客主题。Gyoza 借鉴了 [Shiro](https://github.com/innei/Shiro) 和一些网站的设计。
+Gyoza is a blog theme developed using Astro and React. Gyoza draws inspiration from [Shiro](https://github.com/innei/Shiro) and other website designs.
 
-Gyoza 的核心理念是简洁，快速，可爱。
+Gyoza's core principles are simplicity, speed, and appealing style.
 
-- 在 [Markdown 示例](/posts/markdown) 中展示了 Markdown 的渲染样式
-- 可以前往 [Gyoza 使用指南](/posts/guide) 了解 Gyoza 的使用方法
+- Markdown rendering is demonstrated in the [Markdown Example](/posts/markdown)
+- Learn how to use Gyoza in the [Gyoza User Guide](/posts/guide)
 
-Gyoza 是开源的，如果你对这个项目感兴趣，欢迎前往 Gyoza 的 [Github 仓库](https://github.com/lxchapu/astro-gyoza) 来提 Issue 或者 PR。
+Gyoza is open source. If you're interested in this project, please submit an issue or pull request in the Gyoza [Github Repository](https://github.com/lxchapu/astro-gyoza).
 
-## 关于作者
+## About the Author
 
-我是 lxchapu，是一名前端开发者，喜欢各种有趣的东西。欢迎访问我的个人网站 [www.lxchapu.com](https://www.lxchapu.com)，了解关于我更多的信息。
+I'm lxchapu, a front-end developer who enjoys all kinds of fun things. Visit my personal website [www.lxchapu.com](https://www.lxchapu.com) for more information.
 
-## 致谢
+## Acknowledgements
 
-感谢以下项目：
+Thanks to the following projects:
 
 - [Astro](https://astro.build/)
 - [React](https://reactjs.org/)

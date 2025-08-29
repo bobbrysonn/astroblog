@@ -16,29 +16,6 @@ Enjoy it!
 
 ![Preview](https://s2.loli.net/2024/05/06/A9rzC3Uym7RwdQc.webp)
 
-## 🎉 Features
-
-- ✅ 有着规范的 URL 和 OpenGraph 信息，对 SEO 友好
-- ✅ 支持站点地图
-- ✅ 支持 RSS 订阅
-- ✅ 支持夜间模式
-- ✅ 特殊日期变灰
-- ✅ 简单干净的配色和主题
-- ✅ 支持评论系统
-- ✅ 支持代码高亮
-
-## 🔧 Tech Stack
-
-- [Astro](https://astro.build/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Jotai](https://jotai.org/)
-
-## 📖 Documentation
-
-前往：[Documentation](https://gyoza.lxchapu.com/posts/guide)
-
 ## 🚀 Project Structure
 
 ```text

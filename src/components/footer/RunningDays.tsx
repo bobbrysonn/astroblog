@@ -11,8 +11,8 @@ export function RunningDays() {
   }, [])
 
   if (days < 0) {
-    return <span>Ops! 网站还没有发布</span>
+    return <span>Oops! The site hasn’t launched yet</span>
   }
 
-  return <span>已经运行了 {days} 天</span>
+  return <span>The site has been alive for {days} days</span>
 }

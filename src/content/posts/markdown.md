@@ -1,99 +1,99 @@
 ---
-title: Markdown 示例
+title: Markdown Examples
 date: 2024-04-01
-summary: 这是一篇 Markdown 文章的示例。展示了 Markdown 的语法和渲染效果。
-category: 例子
+summary: This is a sample Markdown post. It demonstrates Markdown syntax and how it renders in Astro.
+category: Examples
 tags: [Markdown]
 ---
 
-下面是在 Astro 中编写 Markdown 内容时，可以使用的一些基本 Markdown 语法示例。
+Below are some basic Markdown syntax examples you can use when writing content in Astro.
 
-## 标题
+## Headings
 
-你应该避免在 Markdown 正文中重复创建文章标题，因为文章标题会根据 `frontmatter` 中 `title` 自动生成。
+You should avoid repeating the article title inside the Markdown body — the title is automatically generated from the `frontmatter` field `title`.
 
-> 避免标题层级过深，一般到三级标题就够了。
+> Avoid nesting headings too deeply. Three levels are usually enough.
 
-# 一级
+# H1
 
-## 二级
+## H2
 
-### 三级 `inline code`
+### H3 with `inline code`
 
-#### 四级
+#### H4
 
-##### 五级
+##### H5
 
-###### 六级
+###### H6
 
-## 段落
+## Paragraphs
 
 Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
 
-使用行尾使用两个空格进行段落内的换行
+Use two spaces at the end of a line to create a line break within a paragraph:
 
 All work and no play makes Jack a dull boy.  
 All work and no play makes Jack a dull boy.
 
-## 图片
+## Images
 
-小尺寸的图片
+Small image:
 
-![图片描述](https://picsum.photos/seed/picsum/250/400)
+![Alt text](https://picsum.photos/seed/picsum/250/400)
 
-大尺寸的图片
+Large image:
 
-![图片描述](https://picsum.photos/seed/picsum/1200/900)
+![Alt text](https://picsum.photos/seed/picsum/1200/900)
 
-带标题的图片
+Image with caption:
 
-![图片描述](https://picsum.photos/seed/picsum/400/300 '图片标题')
+![Alt text](https://picsum.photos/seed/picsum/400/300 'Image title')
 
-## 强调
+## Emphasis
 
-这是**重要内容**，这是*次要内容*
+This is **important text**, this is _less important text_.
 
-## 删除线
+## Strikethrough
 
-~~这是一段被删除的文本。~~
+~~This text is deleted.~~
 
-## 引用
+## Blockquotes
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+The blockquote element represents content quoted from another source. You can include citations in `footer` or `cite` elements, and also mix in inline formatting.
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
+> **Note** that you can use _Markdown syntax_ inside blockquotes.
 
-嵌套的引用
+Nested blockquote:
 
-> 引用
+> Quote
 >
-> > 嵌套的引用
+> > Nested quote
 
-带脚标的引用
+With citation:
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
 > — <cite>Rob Pike[^1]</cite>
 
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+[^1]: The above quote is from Rob Pike’s [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) at Gopherfest, November 18, 2015.
 
-## 分割线
+## Horizontal Rule
 
 ---
 
-## 链接
+## Links
 
-这是内部链接 [Gyoza 使用指南](/posts/guide)
+Internal link: [Gyoza Guide](/posts/guide)
 
-这是外部连接 [React **中文**文档](https://zh-hans.react.dev/)
+External link: [React **Docs**](https://react.dev/)
 
-自动渲染成连接 <https://github.com>
+Auto-link: <https://github.com>
 
-邮箱地址 <mail@example.com>
+Email: <mail@example.com>
 
-## 表格
+## Tables
 
-设置单元格对齐
+With alignment:
 
 | Name  | Age |  Fruit |
 | :---- | :-: | -----: |
@@ -101,23 +101,23 @@ The blockquote element represents content that is quoted from another source, op
 | Alice | 23  | Banana |
 | John  | 28  | Orange |
 
-支持行内 Markdown
+Supports inline Markdown:
 
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
 
-表格溢出
+Table overflow example:
 
 | A                                                        | B                                                                                                             | C                                                                                                                                    | D                                                 | E                                                          | F                                                                    |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------- |
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. | Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex. | Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus | Proin sit amet velit nec enim imperdiet vehicula. | Ut bibendum vestibulum quam, eu egestas turpis gravida nec | Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien |
 
-## 代码块
+## Code Blocks
 
 ### Syntax
 
-we can use 3 backticks ``` in new line and write snippet and close with 3 backticks on new line and to highlight language specific syntac, write one word of language name after first 3 backticks, for eg. html, javascript, css, markdown, typescript, txt, bash
+Use triple backticks ```to wrap code. To enable syntax highlighting, add the language name (e.g.`html`, `javascript`, `css`, `markdown`, `typescript`, `bash`) right after the opening backticks.
 
 ```html
 <!doctype html>
@@ -136,23 +136,23 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 const var text = "hello world"
 ```
 
-## KaTeX 公式
+## KaTeX Formulas
 
-使用 `$` 符号包裹公式生成行内公式，例如：$E = mc^2$。
+Wrap inline formulas with `$`, e.g. `$E = mc^2$`.
 
-使用 `$$` 符号包裹公式来生成独立公式。例如：
+Use `$$` for block formulas:
 
 $$
 e^{i\pi} + 1 = 0
 $$
 
-也可以使用代码块（` ```math `）的方式：
+Or use a code block with `math`:
 
 ```math
 \oint_{\partial V} \mathbf{E} \cdot d\mathbf{A} = \frac{Q}{\epsilon_0}
 ```
 
-## List Types
+## Lists
 
 ### Ordered List
 
@@ -186,7 +186,7 @@ $$
 - Another item
 - And another item
 
-### Nested list
+### Nested List
 
 #### Syntax
 
@@ -206,6 +206,7 @@ $$
   - Apple
   - Orange
   - Banana
+
 - Dairy
   - Milk
   - Cheese
@@ -241,7 +242,7 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 ## Spoiler
 
 ```md
-||hide content||
+||hidden content||
 ```
 
-正常情况下，该内容会隐藏 ||hide content||，鼠标悬浮时才会显示。
+By default, this content stays hidden: ||hidden content||. It only appears on hover.

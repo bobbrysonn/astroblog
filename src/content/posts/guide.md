@@ -1,148 +1,140 @@
 ---
-title: Gyoza 使用指南
+title: Gyoza User Guide
 date: 2024-04-01
 lastMod: 2024-08-10T03:58:16.758Z
-summary: 欢迎使用 Gyoza，Gyoza 是一款 Astro 博客主题，它保持简洁和可爱的风格。本篇文章将会介绍如何使用并部署 Gyoza。
-category: 教程
+summary: Welcome to Gyoza — a simple and cute Astro blog theme. This article will introduce how to use and deploy Gyoza.
+category: Tutorial
 tags: [Astro, Gyoza]
 sticky: 1
 ---
 
-## 前置条件
+## Prerequisites
 
-- node 版本 >= 18.18.0
-- pnpm 版本 > 8.1.0
+- Node version >= 18.18.0
+- pnpm version > 8.1.0
 
-## 安装
+## Installation
 
-### 克隆仓库
+### Fork & Clone Repository
 
-登录 Github 账号，打开 [lxchapu/astro-gyoza](https://github.com/lxchapu/astro-gyoza)，点击右上角的 Fork 按钮，将仓库克隆到你自己的账号下。
+Log into your GitHub account, open [lxchapu/astro-gyoza](https://github.com/lxchapu/astro-gyoza), and click the **Fork** button in the top-right corner to copy the repo into your account.
 
-复制这个仓库的地址，打开终端，使用 `git clone` 命令将仓库克隆到本地。
+Copy the repo’s URL, open your terminal, and run `git clone` to clone it locally.
 
-> 本项目推荐使用 pnpm 作为你的包管理器，如果你还没有安装 pnpm，请先安装 pnpm。
+> This project recommends using **pnpm** as your package manager. If you haven’t installed pnpm yet, please install it first.
 
-### 安装依赖
+### Install Dependencies
 
 ```sh
 cd astro-gyoza
 pnpm install
 ```
 
-### 命令介绍
+### Available Commands
 
-本地运行
+Run locally:
 
 ```sh
 pnpm dev
 ```
 
-打包静态文件
+Build static files:
 
 ```sh
 pnpm build
 ```
 
-本地预览
+Local preview:
 
 ```sh
 pnpm preview
 ```
 
-### 配置项
+### Configuration
 
-本项目中的绝大部分配置都定义在 `src/config.json` 文件中。
+Most project configuration lives in `src/config.json`.
 
-你应该首先将 `site.url` 修改成自己的域名，避免导航错误。
+You should **first update `site.url` to your own domain** to avoid navigation issues.
 
-以下是配置项的说明：
+Here’s an overview of the config options:
 
 ```json
 {
   "site": {
-    "url": "", // 网站地址
-    "title": "", // 网站标题
-    "description": "", // 通用的网站描述 SEO
-    "keywords": "", // 通用的网站关键词 SEO
-    "lang": "zh-CN", // 网站的语言
-    "favicon": "", // 浏览器图标，存放在 public 目录下
-    "appleTouchIcon": "" // 苹果设备图标，存放在 public 目录下
+    "url": "", // Site URL
+    "title": "", // Site title
+    "description": "", // General site description (SEO)
+    "keywords": "", // General site keywords (SEO)
+    "lang": "en", // Site language
+    "favicon": "", // Browser favicon, stored in /public
+    "appleTouchIcon": "" // Apple touch icon, stored in /public
   },
   "author": {
-    "name": "", // 作者名称
-    "twitterId": "", // 推特账号 ID，以 @ 开头，用于 Open Graph
-    "avatar": "" // 作者头像地址
+    "name": "", // Author name
+    "twitterId": "", // Twitter handle (with @), used for Open Graph
+    "avatar": "" // Author avatar URL
   },
-  // 首页 Hero 组件
+  // Homepage Hero component
   "hero": {
-    "name": "", // 显示的名称
-    "bio": "", // 一句话介绍
-    "description": "", // 补充描述
-    // 社交账号
+    "name": "", // Display name
+    "bio": "", // Short tagline
+    "description": "", // Longer description
     "socials": [
       {
-        "name": "", // 社交平台类型
-        "icon": "", // 社交平台图标
-        "url": "", // 链接
-        "color": "" // 图标颜色
+        "name": "", // Platform name
+        "icon": "", // Icon class
+        "url": "", // Link
+        "color": "" // Icon color
       }
     ],
-    "yiyan": "" // 显示一言
+    "yiyan": "" // One-liner quote
   },
   "color": {
-    // 强调色，请填写 16 进制颜色值。每次会从中随机取出一组
-    "accent": [{ "light": "", "dark": "" }],
-    // 背景色
+    "accent": [{ "light": "", "dark": "" }], // Accent colors
     "bg": {
       "primary": { "light": "", "dark": "" },
       "secondary": { "light": "", "dark": "" }
     },
-    // 文字颜色
     "text": {
       "primary": { "light": "", "dark": "" },
       "secondary": { "light": "", "dark": "" }
     },
-    // 边框颜色
     "border": {
       "primary": { "light": "", "dark": "" }
     }
   },
-  // 顶部导航栏
+  // Top navigation menu
   "menus": [
     {
-      "name": "首页",
+      "name": "Home",
       "link": "/",
       "icon": "icon-pantone"
     }
   ],
   "posts": {
-    "perPage": 10 // 每一页显示的文章数量
+    "perPage": 10 // Number of posts per page
   },
   "footer": {
-    "startTime": "" // 博客网站开始时间 请使用 ISO 格式
+    "startTime": "" // Blog start time (ISO format)
   },
-  // Waline 评论系统，前往 https://waline.js.org/ 查看
+  // Waline comment system https://waline.js.org/
   "waline": {
     "serverURL": ""
   },
-  // 赞助
+  // Sponsorship
   "sponsor": {
-    "wechat": "" // 微信赞赏码图片地址
+    "wechat": "" // WeChat sponsor QR code
   },
-  // 如果需要使用网站数据统计，将 enable 修改为 true，并填写对应的配置
+  // Analytics (set enable=true and configure one)
   "analytics": {
     "enable": false,
-    // https://analytics.google.com
     "google": {
       "measurementId": ""
     },
-    // https://umami.is/docs
     "umami": {
       "serverUrl": "",
       "websiteId": ""
     },
-    // https://clarity.microsoft.com/
     "microsoftClarity": {
       "projectId": ""
     }
@@ -150,15 +142,24 @@ pnpm preview
 }
 ```
 
-## 部署
+## Deployment
 
-> 这里只介绍了 Vercel，你当然可以选择其他平台例如：Cloudflare Pages 或你自己的服务器。  
-> 部署之前，确保你已经修改 `site.url`。
+> Here we’ll use **Vercel** as an example, but you can also choose Cloudflare Pages or your own server.
+> Before deploying, make sure you’ve updated `site.url`.
 
-### 部署到 Vercel
+### Deploy to Vercel
 
-登录 Vercel 账号，点击右上角的 Add new... 选择 Project。然后在 Import Git Repository 中选择刚刚 Fork 的仓库，点击 Import 按钮。
+Log into your Vercel account, click **Add new\... → Project**, and under **Import Git Repository** select the repo you forked earlier. Click **Import**.
 
-进入项目配置页面，直接点击 Deploy 按钮，静静等待部署完成就 👌 了。
+In the project setup page, just hit **Deploy** — wait a bit, and you’re done 👌.
 
-Vercel 会为你分配一个域名，你可以在项目设置中设置自定义域名，更多操作请参考 Vercel 文档。
+Vercel will give you a default domain. You can set up a custom domain in project settings. For more details, check the Vercel documentation.
+
+```
+
+---
+
+✨ This keeps the structure faithful but makes the English flow naturally for blog readers.
+
+Do you want me to also **polish the summary line** (make it a bit more fun/engaging for readers instead of literal translation)?
+```
